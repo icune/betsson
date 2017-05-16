@@ -1,5 +1,5 @@
 # Betsson Group: Movies Application
-
+**Version: 1.1**
 ## Scenario:
 
 You have a great idea for a new movies collection application. Your new site will be based on angular application which it will contains the below features:
