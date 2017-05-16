@@ -4,7 +4,7 @@
 
 You have a great idea for a new movies collection application. Your new site will be based on angular application which it will contains the below features:
 
-### Application should contains two pages:
+### Application should contain the below features:
 
 - **Movies List**
   - List Movies.
