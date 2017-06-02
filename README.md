@@ -27,6 +27,7 @@ You may use any 3rd party libraries which can facilitates your development.
 #### Extra Credit
 
 - Apply [Redux](http://redux.js.org/) application state management to your application. You may use any 3rd party libraries which can facilitates your development.
+- Unit tests.
 - Polished design.
 - Responsive design.
 - Animations.

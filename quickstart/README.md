@@ -54,7 +54,6 @@ with excellent support for Angular apps that use routing.
 
 Here are the test related scripts:
 * `npm test` - compiles, runs and watches the karma unit tests
-* `npm run e2e` - compiles and run protractor e2e tests, written in Typescript (*e2e-spec.ts)
 ## Unit Tests
 TypeScript unit-tests are usually in the `src/app` folder. Their filenames must end in `.spec.ts`.
 
