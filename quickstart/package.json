@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
-    "build": "tsc -p src/",
+    "build": "tsc -p src/ && npm run build:sass",
+    "build:sass": "node-sass src/style.scss src/style.css",
+    "build:sass:watch": "node-sass src/style.scss src/style.css -w",
     "build:watch": "tsc -p src/ -w",
     "serve": "lite-server -c=bs-config.json",
     "prestart": "npm run build",
-    "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
+    "start": "concurrently \"npm run build:watch\" \"npm run build:sass:watch\" \"npm run serve\"",
     "pretest": "npm run build",
     "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "pretest:once": "npm run build",
@@ -27,9 +29,9 @@
     "@angular/platform-browser-dynamic": "~4.0.0",
     "@angular/router": "~4.0.0",
     "angular-in-memory-web-api": "~0.3.0",
-    "systemjs": "0.19.40",
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -45,6 +47,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^4.5.3",
     "rimraf": "^2.5.4",
     "@types/node": "^6.0.46",
     "@types/jasmine": "2.5.36"
