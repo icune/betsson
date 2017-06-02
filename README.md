@@ -1,8 +1,8 @@
 # Betsson Group: Movies Application
-**Version: 1.1**
+**Version: 1.2**
 ## Scenario:
 
-You have a great idea for a new movies collection application. Your new site will be based on angular application which it will contains the below features:
+You have a great idea for a new movies collection application. Your new site will be based on angular application which it will contain the below features:
 
 ### Application should contain the below features:
 
@@ -35,12 +35,18 @@ If you get the demo in good shape and have extra time, add your own flair and fe
 
 #### Content
 
-- Together with this readme file, you will find ` **src** ` folder which contains helpful content for your application:
+- Together with this readme file, you will find ` **content** ` folder which contains helpful content for your application:
   - Movies mock data.
   - Movies cover images.
   - Basic movies model.
 - Feel free to modify movies content.
 - Feel free to modify movies model file.
+
+#### How to start?
+
+We encourage you to start the project however it suits you best.
+
+Optionally you can use the Angular QuickStart Source that we included (`quickstart` folder).
 
 #### Deliverable
 
