@@ -9,7 +9,6 @@ You have a great idea for a new movies collection application. Your new site wil
 - **Movies List**
   - List Movies.
   - Search.
-  - Filter by Genre.
   - Clicking on a particular movie will redirect you to the selected &#39;movie detail&#39; page.
 - **Movie detail**
   - Show selected movie detail information.
@@ -26,6 +25,7 @@ You may use any 3rd party libraries which can facilitates your development.
 
 #### Extra Credit
 
+- Filter by Genre.
 - Apply [Redux](http://redux.js.org/) application state management to your application. You may use any 3rd party libraries which can facilitates your development.
 - Unit tests.
 - Polished design.
