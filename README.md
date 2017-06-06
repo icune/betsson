@@ -1,15 +1,14 @@
 # Betsson Group: Movies Application
-**Version: 1.1**
+**Version: 1.2**
 ## Scenario:
 
-You have a great idea for a new movies collection application. Your new site will be based on angular application which it will contains the below features:
+You have a great idea for a new movies collection application. Your new site will be based on angular application which it will contain the below features:
 
 ### Application should contain the below features:
 
 - **Movies List**
   - List Movies.
   - Search.
-  - Filter by Genre.
   - Clicking on a particular movie will redirect you to the selected &#39;movie detail&#39; page.
 - **Movie detail**
   - Show selected movie detail information.
@@ -26,7 +25,9 @@ You may use any 3rd party libraries which can facilitates your development.
 
 #### Extra Credit
 
+- Filter by Genre.
 - Apply [Redux](http://redux.js.org/) application state management to your application. You may use any 3rd party libraries which can facilitates your development.
+- Unit tests.
 - Polished design.
 - Responsive design.
 - Animations.
@@ -35,12 +36,18 @@ If you get the demo in good shape and have extra time, add your own flair and fe
 
 #### Content
 
-- Together with this readme file, you will find ` **src** ` folder which contains helpful content for your application:
+- Together with this readme file, you will find ` **content** ` folder which contains helpful content for your application:
   - Movies mock data.
   - Movies cover images.
   - Basic movies model.
 - Feel free to modify movies content.
 - Feel free to modify movies model file.
+
+#### How to start?
+
+We encourage you to start the project however it suits you best.
+
+Optionally you can use the Angular QuickStart Source that we included (`quickstart` folder).
 
 #### Deliverable
 
