@@ -14,6 +14,10 @@ You have a great idea for a new movies collection application. Your new site wil
   - Show selected movie detail information.
   - Navigate back to &#39;movie list&#39;.
 
+Pages should have proper urls and navigation should work as expected:
+  * using the back and forward button of the browser should take to the correct page
+  * reloading the current page should work as expected
+
 #### Technologies required
 
 - [Angular](https://angular.io/) (2 or higher)
