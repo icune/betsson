@@ -25,12 +25,12 @@ Pages should have proper urls and navigation should work as expected:
 - [Rxjs](https://github.com/ReactiveX/rxjs)
 - [Sass](http://sass-lang.com/)
 
-You may use any 3rd party libraries which can facilitates your development.
+You may use any 3rd party libraries which can facilitate your development.
 
 #### Extra Credit
 
 - Filter by Genre.
-- Apply [Redux](http://redux.js.org/) application state management to your application. You may use any 3rd party libraries which can facilitates your development.
+- Apply [Redux](http://redux.js.org/) application state management to your application. You may use any 3rd party libraries which can facilitate your development.
 - Unit tests.
 - Polished design.
 - Responsive design.
