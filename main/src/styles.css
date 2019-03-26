@@ -4,3 +4,7 @@
 .cdk-overlay-container {
     z-index: 10000000000;
 }
+
+p {
+    text-indent: 10px;
+}
