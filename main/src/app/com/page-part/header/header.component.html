@@ -1,0 +1,14 @@
+<header>
+  <a class="logo" routerLink="/"></a>
+  <span class="desktop-menu">
+    <app-menu-items></app-menu-items>
+  </span>
+  <span class="mobile-menu">
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <app-menu-items></app-menu-items>
+    </mat-menu>
+  </span>
+</header>

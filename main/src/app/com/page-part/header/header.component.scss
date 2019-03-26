@@ -1,0 +1,47 @@
+@import "../../../vars";
+header {
+  background-color: black;
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  span,button,div,a {
+    vertical-align: top;;
+  }
+  color: white;
+  z-index: 1000000;
+  .logo {
+    display: inline-block;
+    background-image: url(logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 4px;
+  }
+  .mobile-menu {
+    display: none;
+    float: right;
+  }
+  .desktop-menu {
+    margin-left: 50px;
+  }
+  @media (max-width: $small-width) {
+    .mobile-menu {
+      display: block;
+    }
+    .desktop-menu {
+      display: none;
+    }
+    .logo {
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      top: 14px;
+      transform: translateX(-50%);
+    }
+  }
+}
