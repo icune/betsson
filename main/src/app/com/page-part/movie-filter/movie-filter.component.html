@@ -1,0 +1,26 @@
+<div class="movie-filter">
+  <span class="section">
+    <mat-form-field>
+      <input matInput placeholder="Movie title" value="">
+    </mat-form-field>
+  </span>
+  <span class="section">
+    <mat-form-field>
+      <input matInput placeholder="Movie description" value="">
+    </mat-form-field>
+  </span>
+  <span class="section">
+    <span class="label">
+      Rating from
+    </span>
+    <mat-slider
+            [max]="100"
+            [min]="0"
+            [step]="0.1"
+            [thumbLabel]="true"
+            [tickInterval]="false"
+            [(ngModel)]="criteria.rateFrom"
+    >
+  </mat-slider>
+  </span>
+</div>

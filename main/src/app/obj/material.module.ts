@@ -6,7 +6,8 @@ import {
     MatInputModule,
     MatCardModule,
     MatSelectModule,
-    MatTooltipModule, MatTableModule, MatSortModule, MatTabsModule, MatRadioModule
+    MatTooltipModule, MatTableModule, MatSortModule, MatTabsModule, MatRadioModule,
+    MatSliderModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -21,7 +22,8 @@ let imports = [MatMenuModule,
     MatTableModule,
     MatSortModule,
     MatTabsModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSliderModule
 ];
 
 @NgModule({

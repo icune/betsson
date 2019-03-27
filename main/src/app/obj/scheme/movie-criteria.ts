@@ -5,8 +5,8 @@ export class MovieCriteria {
     name: string;
     description: string;
     genres: GenreType[] = [];
-    rateFrom: number;
-    rateTo: number;
+    rateFrom: number = 0;
+    rateTo: number = 10;
     lengthFrom: number;
     lengthTo: number;
 

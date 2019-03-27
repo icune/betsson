@@ -1,0 +1,13 @@
+.movie-filter {
+  .section {
+    margin: 5px;
+    position: relative;
+    .label {
+      top: -20px;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+    }
+  }
+}

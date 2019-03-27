@@ -14,6 +14,9 @@ import { MovieProviderService } from './obj/base/movie-provider.service';
 import { MovieMockProviderService } from './obj/provider/movie-mock-provider.service';
 import { MovieDurationPipe } from './obj/pipe/movie-duration.pipe';
 import { MovieComponent } from './com/page/movie/movie.component';
+import { SearchComponent } from './com/page/search/search.component';
+import { MovieFilterComponent } from './com/page-part/movie-filter/movie-filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,16 @@ import { MovieComponent } from './com/page/movie/movie.component';
     MovieTileComponent,
     AllMoviesComponent,
     MovieDurationPipe,
-    MovieComponent
+    MovieComponent,
+    SearchComponent,
+    MovieFilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
       {provide: MovieProviderService, useClass: MovieMockProviderService}
