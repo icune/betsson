@@ -1,4 +1,7 @@
-<app-movie-filter [criteriaSubject]="criteriaSubject">
+<app-movie-filter
+        [criteriaSubject]="criteriaSubject"
+        [criteriaUpdater]="criteriaUpdater"
+>
 </app-movie-filter>
 <div class="movies">
     <app-loader *ngIf="(movies | async) == null">

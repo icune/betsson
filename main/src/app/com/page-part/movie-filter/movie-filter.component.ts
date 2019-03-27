@@ -11,6 +11,9 @@ import { BehaviorSubject } from 'rxjs';
 export class MovieFilterComponent implements OnInit {
   @Input()
   criteriaSubject: BehaviorSubject<MovieCriteria>;
+  @Input()
+  criteriaUpdater: BehaviorSubject<MovieCriteria> = new BehaviorSubject(new MovieCriteria());
+
   criteria: MovieCriteria = new MovieCriteria();
   constructor(
       public movieProvider: MovieProviderService
@@ -26,6 +29,9 @@ export class MovieFilterComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.criteriaUpdater.subscribe(criteria => {
+        this.criteria = criteria;
+    });
     this.submit();
   }
 
