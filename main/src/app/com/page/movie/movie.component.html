@@ -1,0 +1,8 @@
+<h1 *ngIf="movie | async">
+  {{ (movie | async).name }}
+</h1>
+<div>
+  <app-movie-tile *ngIf="movie | async" [movie]="movie | async" [fullPage]="true">
+
+  </app-movie-tile>
+</div>

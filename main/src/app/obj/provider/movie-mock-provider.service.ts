@@ -32,6 +32,10 @@ export class MovieMockProviderService extends MovieProviderService{
   filterByCriteria(movies: Movie[], criteria: MovieCriteria): Movie[] {
       if (criteria === null) {
           return movies;
+      } else if (criteria.ids) {
+          return movies.filter((movie: Movie) => {
+              return criteria.ids.indexOf(movie.id) !== -1;
+          })
       } else {
           return [];
       }

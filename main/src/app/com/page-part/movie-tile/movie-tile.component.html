@@ -1,13 +1,14 @@
-<div *ngIf="movie" class="movie-tile">
-  <h4 class="name">
-    {{ movie.name }}
+<div *ngIf="movie" [class]="'movie-tile ' + (fullPage ? 'full-page' : '')">
+  <h4 class="name" *ngIf="!fullPage">
+    <a routerLink="/movie/{{ movie.id }}">{{ movie.name }} <mat-icon>insert_link</mat-icon></a>
+
   </h4>
   <div class="content">
     <div class="cell left">
       <img src="/assets/images/movie-covers/{{ movie.img }}" alt="">
     </div>
     <div class="cell right">
-      <p class="description micro">
+      <p [class]="'description ' + (!fullPage ? 'micro' : '')">
         {{ movie.description }}
       </p>
       <p class="param-value">

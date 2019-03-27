@@ -9,6 +9,8 @@ import { Movie } from '../../../obj/scheme/movie';
 export class MovieTileComponent implements OnInit {
   @Input()
   movie: Movie = null;
+  @Input()
+  fullPage: boolean = false;
   constructor() { }
 
   ngOnInit() {

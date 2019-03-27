@@ -9,11 +9,26 @@
   @media (max-width: $small-width) {
     width: 100%;
   }
+  &.full-page {
+    width: 100%;
+    p.description {
+      font-size: 13px;
+    }
+  }
   h4.name {
     margin: 0;
     padding-top: 0px;
     padding: 4px;
     padding-bottom: 7px;
+
+    a {
+      color: black;
+      mat-icon {
+        font-size: 20px;
+        position: relative;
+        top: 4px;
+      }
+    }
   }
   .content {
     display: table;
@@ -27,21 +42,22 @@
         text-indent: 0px;
         font-size: 12px;
       }
-      p.description {
-        font-size: 10px;
-        &.micro {
-          height: 60px;
-          line-height: 20px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-      }
-      .genre {
-        border: 1px solid silver;
-        border-radius: 2px;
-        padding: 2px;
-        margin: 1px;
-      }
     }
+  }
+  p.description {
+    font-size: 10px;
+    &.micro {
+      height: 60px;
+      line-height: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .genre {
+    border: 1px solid silver;
+    border-radius: 2px;
+    padding: 2px;
+    margin: 1px;
+    display: inline-block;
   }
 }

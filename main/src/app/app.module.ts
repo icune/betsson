@@ -13,6 +13,7 @@ import { AllMoviesComponent } from './com/page/all-movies/all-movies.component';
 import { MovieProviderService } from './obj/base/movie-provider.service';
 import { MovieMockProviderService } from './obj/provider/movie-mock-provider.service';
 import { MovieDurationPipe } from './obj/pipe/movie-duration.pipe';
+import { MovieComponent } from './com/page/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MovieDurationPipe } from './obj/pipe/movie-duration.pipe';
     WelcomeComponent,
     MovieTileComponent,
     AllMoviesComponent,
-    MovieDurationPipe
+    MovieDurationPipe,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
