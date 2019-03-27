@@ -12,6 +12,7 @@ import { MovieTileComponent } from './com/page-part/movie-tile/movie-tile.compon
 import { AllMoviesComponent } from './com/page/all-movies/all-movies.component';
 import { MovieProviderService } from './obj/base/movie-provider.service';
 import { MovieMockProviderService } from './obj/provider/movie-mock-provider.service';
+import { MovieDurationPipe } from './obj/pipe/movie-duration.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MovieMockProviderService } from './obj/provider/movie-mock-provider.ser
     MenuItemsComponent,
     WelcomeComponent,
     MovieTileComponent,
-    AllMoviesComponent
+    AllMoviesComponent,
+    MovieDurationPipe
   ],
   imports: [
     BrowserModule,

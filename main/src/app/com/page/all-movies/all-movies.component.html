@@ -3,5 +3,7 @@
 </h1>
 
 <div>
+    <app-movie-tile *ngFor="let movie of (movies | async)" [movie]="movie">
 
+    </app-movie-tile>
 </div>

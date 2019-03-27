@@ -27,5 +27,6 @@ let imports = [MatMenuModule,
 @NgModule({
     imports: imports,
     exports: imports,
+    declarations: [],
 })
 export class MaterialModule { }

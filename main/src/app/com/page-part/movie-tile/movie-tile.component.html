@@ -1,3 +1,36 @@
-<p>
-  movie-tile works!
-</p>
+<div *ngIf="movie" class="movie-tile">
+  <h4 class="name">
+    {{ movie.name }}
+  </h4>
+  <div class="content">
+    <div class="cell left">
+      <img src="/assets/images/movie-covers/{{ movie.img }}" alt="">
+    </div>
+    <div class="cell right">
+      <p class="description micro">
+        {{ movie.description }}
+      </p>
+      <p class="param-value">
+        <b class="bold-col">
+          Duration:
+        </b>
+        {{ movie.length | movieDuration }}
+      </p>
+      <p class="param-value">
+        <b class="bold-col">
+          Rating:
+        </b>
+        {{ movie.rate }}
+      </p>
+      <p class="param-value">
+        <b class="bold-col">
+          Genres:
+        </b>
+        <span class="genre" *ngFor="let genre of movie.genres">
+          {{ genre }}
+        </span>
+      </p>
+    </div>
+  </div>
+
+</div>

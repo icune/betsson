@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Movie } from '../../../obj/scheme/movie';
 
 @Component({
   selector: 'app-movie-tile',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-tile.component.scss']
 })
 export class MovieTileComponent implements OnInit {
-
+  @Input()
+  movie: Movie = null;
   constructor() { }
 
   ngOnInit() {
