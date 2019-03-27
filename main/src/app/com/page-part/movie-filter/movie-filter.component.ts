@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MovieCriteria } from '../../../obj/scheme/movie-criteria';
 import { MovieProviderService } from '../../../obj/base/movie-provider.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-movie-filter',
@@ -8,6 +9,8 @@ import { MovieProviderService } from '../../../obj/base/movie-provider.service';
   styleUrls: ['./movie-filter.component.scss']
 })
 export class MovieFilterComponent implements OnInit {
+  @Input()
+  criteriaSubject: BehaviorSubject<MovieCriteria>;
   criteria: MovieCriteria = new MovieCriteria();
   constructor(
       public movieProvider: MovieProviderService
@@ -19,9 +22,15 @@ export class MovieFilterComponent implements OnInit {
 
   clear() {
     this.criteria = new MovieCriteria();
+    this.submit();
   }
 
   ngOnInit() {
+    this.submit();
+  }
+
+  submit() {
+    this.criteriaSubject.next(this.criteria);
   }
 
 }
