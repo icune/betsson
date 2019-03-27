@@ -1,3 +1,6 @@
+# UPD
+To start app just run: cd main && npm install && ng serve
+
 # Betsson Group: Movies Application
 **Version: 1.2**
 ## Scenario:
