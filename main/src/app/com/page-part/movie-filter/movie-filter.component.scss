@@ -1,7 +1,24 @@
+::ng-deep .mat-card-header-text {
+  margin: 0px !important;
+}
+
+@import "../../../vars";
+
 .movie-filter {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1100px) {
+    display: block;
+    .section {
+      display: block;
+    }
+  }
   .section {
     margin: 5px;
     position: relative;
+    mat-form-field, mat-slider {
+      width: 100%;
+    }
     .label {
       top: -20px;
       position: absolute;
@@ -9,5 +26,8 @@
       text-align: center;
       font-size: 13px;
     }
+  }
+  mat-checkbox {
+    margin: 3px;
   }
 }

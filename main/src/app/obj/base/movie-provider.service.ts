@@ -11,4 +11,7 @@ export class MovieProviderService {
   getMovies(criteria: MovieCriteria = null): BehaviorSubject<Movie[]> {
       return new BehaviorSubject<Movie[]>([]);
   }
+  getAvailableGenres(): BehaviorSubject<string[]> {
+      return new  BehaviorSubject<string[]> ([]);
+  }
 }

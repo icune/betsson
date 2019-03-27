@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { GestureConfig } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -32,14 +33,15 @@ import { FormsModule } from '@angular/forms';
     MovieFilterComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule,
     FormsModule
   ],
   providers: [
-      {provide: MovieProviderService, useClass: MovieMockProviderService}
+      {provide: MovieProviderService, useClass: MovieMockProviderService},
+      { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig },
   ],
   bootstrap: [AppComponent]
 })

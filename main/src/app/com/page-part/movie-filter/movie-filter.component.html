@@ -1,26 +1,94 @@
-<div class="movie-filter">
-  <span class="section">
-    <mat-form-field>
-      <input matInput placeholder="Movie title" value="">
-    </mat-form-field>
-  </span>
-  <span class="section">
-    <mat-form-field>
-      <input matInput placeholder="Movie description" value="">
-    </mat-form-field>
-  </span>
-  <span class="section">
-    <span class="label">
-      Rating from
-    </span>
-    <mat-slider
-            [max]="100"
-            [min]="0"
-            [step]="0.1"
-            [thumbLabel]="true"
-            [tickInterval]="false"
-            [(ngModel)]="criteria.rateFrom"
-    >
-  </mat-slider>
-  </span>
-</div>
+
+
+<mat-card class="search-card">
+    <mat-card-header>
+        <mat-card-title>Search</mat-card-title>
+        <mat-card-subtitle>Search movies by parameters</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+
+      <div class="movie-filter">
+        <span class="section">
+          <mat-form-field>
+            <input matInput placeholder="Movie title" [(ngModel)]="criteria.name" value="">
+          </mat-form-field>
+        </span>
+              <span class="section">
+          <mat-form-field>
+            <input matInput placeholder="Movie description" [(ngModel)]="criteria.description" value="">
+          </mat-form-field>
+        </span>
+              <span class="section">
+          <span class="label">
+            Rating from
+          </span>
+          <mat-slider
+                  [max]="criteria.rateTo"
+                  [min]="0"
+                  [step]="0.1"
+                  [thumbLabel]="true"
+                  [tickInterval]="false"
+                  [(ngModel)]="criteria.rateFrom"
+          >
+          </mat-slider>
+        </span>
+              <span class="section">
+          <span class="label">
+            Rating to
+          </span>
+          <mat-slider
+                  [max]="10"
+                  [min]="criteria.rateFrom"
+                  [step]="0.1"
+                  [thumbLabel]="true"
+                  [tickInterval]="false"
+                  [(ngModel)]="criteria.rateTo"
+          >
+          </mat-slider>
+        </span>
+              <span class="section">
+          <span class="label">
+            Duration from
+          </span>
+          <mat-slider
+                  [max]="criteria.lengthTo"
+                  [min]="0"
+                  [step]="10"
+                  [thumbLabel]="true"
+                  [(ngModel)]="criteria.lengthFrom"
+                  [displayWith]="displayDurationLabel"
+          >
+          </mat-slider>
+        </span>
+              <span class="section">
+          <span class="label">
+            Duration to
+          </span>
+          <mat-slider
+                  [max]="5*60"
+                  [min]="criteria.lengthFrom"
+                  [step]="10"
+                  [thumbLabel]="true"
+                  [(ngModel)]="criteria.lengthTo"
+                  [displayWith]="displayDurationLabel"
+          >
+          </mat-slider>
+        </span>
+      </div>
+      <div class="movie-filter">
+        Genres:
+        <mat-checkbox
+                *ngFor="let genre of (movieProvider.getAvailableGenres() | async)"
+                [(ngModel)]="criteria.genres[genre]"
+        >
+          {{ genre }}
+        </mat-checkbox>
+      </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary">Search</button>
+        <button mat-raised-button (click)="clear()">Clear</button>
+    </mat-card-actions>
+</mat-card>

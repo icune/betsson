@@ -7,7 +7,8 @@ import {
     MatCardModule,
     MatSelectModule,
     MatTooltipModule, MatTableModule, MatSortModule, MatTabsModule, MatRadioModule,
-    MatSliderModule
+    MatSliderModule,
+    MatCheckboxModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -23,7 +24,8 @@ let imports = [MatMenuModule,
     MatSortModule,
     MatTabsModule,
     MatRadioModule,
-    MatSliderModule
+    MatSliderModule,
+    MatCheckboxModule
 ];
 
 @NgModule({

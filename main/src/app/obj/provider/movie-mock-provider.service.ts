@@ -40,5 +40,20 @@ export class MovieMockProviderService extends MovieProviderService{
           return [];
       }
   }
+  getAvailableGenres(): BehaviorSubject<string[]> {
+      return new BehaviorSubject<string[]>([
+          "action",
+          "adventure",
+          "biography",
+          "comedy",
+          "crime",
+          "drama",
+          "history",
+          "mystery",
+          "scifi",
+          "sport",
+          "thriller"
+      ]);
+  }
 
 }
