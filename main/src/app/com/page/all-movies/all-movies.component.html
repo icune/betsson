@@ -3,6 +3,9 @@
 </h1>
 
 <div>
+    <app-loader *ngIf="(movies | async) == null">
+
+    </app-loader>
     <app-movie-tile *ngFor="let movie of (movies | async)" [movie]="movie">
 
     </app-movie-tile>

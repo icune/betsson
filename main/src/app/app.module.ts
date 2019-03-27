@@ -18,6 +18,7 @@ import { MovieComponent } from './com/page/movie/movie.component';
 import { SearchComponent } from './com/page/search/search.component';
 import { MovieFilterComponent } from './com/page-part/movie-filter/movie-filter.component';
 import { FormsModule } from '@angular/forms';
+import { LoaderComponent } from './com/page-part/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     MovieDurationPipe,
     MovieComponent,
     SearchComponent,
-    MovieFilterComponent
+    MovieFilterComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
