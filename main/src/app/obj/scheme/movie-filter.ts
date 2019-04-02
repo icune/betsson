@@ -28,6 +28,9 @@ class MovieCriteriaFilter {
     public lengthTo(val: number, movie: Movie) {
         return movie.length <= val;
     }
+    public ids(val: number[], movie: Movie) {
+        return !val.length || val.indexOf(movie.id) !== -1;
+    }
 }
 
 export class MovieFilter {
@@ -36,6 +39,7 @@ export class MovieFilter {
             return movies;
         }
         let filters = [
+            'ids',
             'name',
             'description',
             'genres',
